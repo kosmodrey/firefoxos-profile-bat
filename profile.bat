@@ -16,9 +16,14 @@ set BackupTime=%time%
 set BackupDate=%date%
 set BackupRoot=%~dp0
 set BackupPath=%BackupRoot%backup
-set BackupHours=%BackupTime:~0,2%
-if "%BackupTime:~0,1%"==" " set BackupHours=0%BackupTime:~1,1%
-set BackupProfileFolder=%BackupDate:~7,2%-%BackupDate:~-10,2%-%BackupDate:~-4,4%_%BackupHours%%BackupTime:~3,2%%BackupTime:~6,2%
+for /F "tokens=1-4 delims=./ " %%A in ('date/t') do (
+  set DateDay=%%A
+  set DateMonth=%%B
+  set DateYear=%%C
+)
+for /F "tokens=1-4 delims=/ " %%D in ('time/t') do set DateTime=%%D
+set BackupDate=%DateDay%-%DateMonth%-%DateYear%_%time:~0,2%-%time:~3,2%-%time:~6,2%
+set BackupProfileFolder=%BackupDate%
 set BackupLog=backup-log.txt
 set BackupRestoreLog=restore-log.txt
 
