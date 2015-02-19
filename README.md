@@ -8,7 +8,7 @@ Backup and restore your Firefox OS profile (contacts, SMS, Wi-Fi, settings and a
 profile.bat <backup|restore> [backup_name]
 ```
 
-By default ```[backup_name]``` folder will be named as current date in ```DD-MM-YYYY_HHMMSS``` format. All backups will be stored in local ```/backup``` directory, but you can freely change ```BackupRoot``` and ```BackupPath``` path keys.
+By default ```[backup_name]``` folder will be named as current date in ```DD-MM-YYYY_HH-MM-SS``` format. All backups will be stored in local ```/backup``` directory, but you can freely change ```BackupRoot``` and ```BackupPath``` path keys.
 
 ### Make a backup:
 
