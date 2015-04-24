@@ -55,7 +55,7 @@ Check D:\Backup\Flame\my_named_backup\restore-log.txt for details.
 
 ### How about Linux and Mac OS?
 
-Check out: https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/backup_restore_profile.sh
+Check out: https://github.com/Mozilla-TWQA/B2G-flash-tool/blob/master/backup_restore_profile.py
 
 ### Requirements:
 
